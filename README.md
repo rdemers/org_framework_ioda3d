@@ -1,7 +1,11 @@
 # org_framework_ioda3d
-IODA|3D - A small 3D engine with physics for flutter framework.
 
-# Todo
+IODA|3D is a small 3D engine with physics for flutter framework. The code respects the principles of IODA architecture. You can get more information on IODA here: [IODA Architecture](./doc/ioda.md).
+
+## Creation of this project
+
+The following comnad has been used for the initial creation of this projet.
+
 * flutter create --org org.iodaframework --template=plugin_ffi --platforms=android,ios,linux,macos,windows ioda3d
 
 ## Getting Started
