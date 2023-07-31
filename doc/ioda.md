@@ -14,7 +14,7 @@ Looking for another way to describe architectures, Westphal defined an architect
 
 The following figure presents a functional view of this architecture.
 
-![alt text](./asserts/IODA.png "IODA Architecture")
+![alt text](./asserts/ioda.png "IODA Architecture")
 
 In this model, operations depend only on data, while integrations depend on operations and other integrations. Westphal hereby claims to have removed all functional dependencies, what remains are simply what he calls formal or empty dependencies. He also claims that since operations cannot call on other operations, extracting logic from new operational methods involves creating integrations to keep things together and thus implementing small methods, less than 10-20 lines of code, in an application.
 
@@ -26,6 +26,8 @@ IODA|3D implements the code according to these architectural principles.
 
 ## Links and references
 
+* [IODA Architecture (pdf presentation)](./asserts/ioda.pdf).
+
 * [Introducing the IODA Architecture](https://www.infoq.com/fr/news/2015/06/ioda-architecture/).
 
-* [Introducing the IODA Architecture (french local version)](./french/Présentation%20de%20l’Architecture%20IODA.html).
+* [Introducing the IODA Architecture (french local version)](./asserts/french/Présentation%20de%20l’Architecture%20IODA.html).
