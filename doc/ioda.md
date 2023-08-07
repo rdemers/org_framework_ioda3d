@@ -1,4 +1,4 @@
-# Principles of IODA architecture
+# IODA - Architecture principes
 
 For Ralf Westphal, common architecture patterns like Layered Architecture, Hexagonal Architecture, and Clean Architecture all look very similar when performing the following 2 actions: defining areas of responsibility and putting functional dependencies in order. For him, these models give a very rough idea of ​​the structure of an application, essentially describing software as a deep hierarchy of functional or behavioral dependencies.
 

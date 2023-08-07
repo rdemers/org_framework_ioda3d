@@ -8,6 +8,10 @@ The following comnad has been used for the initial creation of this projet.
 
 * flutter create --org org.iodaframework --template=plugin_ffi --platforms=android,ios,linux,macos,windows ioda3d
 
+* Example:
+* - https://www.youtube.com/watch?v=iasOWA6JSKc
+* - https://drissas.com/tuto-flutter-application/
+
 ## Getting Started
 
 This project is a starting point for a Flutter

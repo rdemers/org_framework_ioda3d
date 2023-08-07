@@ -1,5 +1,5 @@
 name: ioda3d
-description: A new Flutter FFI plugin project.
+description: IODA|3D.
 version: 0.0.1
 homepage:
 
@@ -10,7 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  logging: ^1.2.0
   plugin_platform_interface: ^2.0.2
+  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   ffi: ^2.0.1
@@ -48,6 +51,9 @@ flutter:
         ffiPlugin: true
       windows:
         ffiPlugin: true
+
+  assets:
+    - assets/images/
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

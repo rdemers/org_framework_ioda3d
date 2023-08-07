@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - ioda3d (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - ioda3d (from `.symlinks/plugins/ioda3d/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  ioda3d:
+    :path: ".symlinks/plugins/ioda3d/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  ioda3d: 3835ffb036a19c7801c1beb3788d89cba64f67e8
+
+PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+
+COCOAPODS: 1.11.3

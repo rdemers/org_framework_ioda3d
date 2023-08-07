@@ -1,74 +1,54 @@
+/* BSD 4 - Clause License
+ *
+ * Copyright (c) 2023, Réal Demers; IODA|3D.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *    This product includes software developed by the IODA|3D.
+ *
+ * 4. Neither the name of the IODA|3D nor the names of its contributors may be
+ *    used to endorse or promote products derived from this software without
+ *    specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+ * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
 import 'package:flutter/material.dart';
-import 'dart:async';
+import 'package:ioda3d_example/pages/index.dart';
 
-import 'package:ioda3d/ioda3d.dart' as ioda3d;
+void main() => runApp(const Ioda3DExample());
 
-void main() {
-  runApp(const MyApp());
-}
+class Ioda3DExample extends StatelessWidget {
+  const Ioda3DExample({super.key});
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  late int sumResult;
-  late Future<int> sumAsyncResult;
-
-  @override
-  void initState() {
-    super.initState();
-    sumResult = ioda3d.sum(1, 2);
-    sumAsyncResult = ioda3d.sumAsync(3, 4);
-  }
+  static const appTitle = "Ioda3DExample";
 
   @override
   Widget build(BuildContext context) {
-    const textStyle = TextStyle(fontSize: 25);
-    const spacerSmall = SizedBox(height: 10);
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Native Packages'),
-        ),
-        body: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            child: Column(
-              children: [
-                const Text(
-                  'This calls a native function through FFI that is shipped as source in the package. '
-                  'The native code is built as part of the Flutter Runner build.',
-                  style: textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                spacerSmall,
-                Text(
-                  'sum(1, 2) = $sumResult',
-                  style: textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                spacerSmall,
-                FutureBuilder<int>(
-                  future: sumAsyncResult,
-                  builder: (BuildContext context, AsyncSnapshot<int> value) {
-                    final displayValue =
-                        (value.hasData) ? value.data : 'loading';
-                    return Text(
-                      'await sumAsync(3, 4) = $displayValue',
-                      style: textStyle,
-                      textAlign: TextAlign.center,
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+    return const MaterialApp(
+      title: appTitle,
+      home: Index(title: appTitle),
     );
   }
 }
